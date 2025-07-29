@@ -56,3 +56,19 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+from langchain.document_loaders import DirectoryLoader
+data_path="data/books"
+
+def load_docs():
+    loader=DirectoryLoader(data_path,glob="*.md")
+    documents=loader.load()
+    return documents
+
+
+
+
+
